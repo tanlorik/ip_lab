@@ -1,1 +1,1 @@
-web: gunicorn ip_lab:ip_lab
+web: gunicorn ip_lab.wsgi
