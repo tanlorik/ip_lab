@@ -1,1 +1,1 @@
-web: gunicorn ./ip_lab/wsgi.py
+web: gunicorn ip_lab.wsgi
