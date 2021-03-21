@@ -1,0 +1,1 @@
+web: gunicorn ip_lab:ip_lab
