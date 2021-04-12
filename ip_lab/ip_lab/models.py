@@ -36,6 +36,8 @@ class Material(models.Model):
         return self.nume
 
 
+
+
 class PromisiuneMaterial(models.Model):
 
     nume = models.CharField(max_length=100, null=False, blank=False)
