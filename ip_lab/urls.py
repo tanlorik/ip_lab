@@ -18,6 +18,7 @@ from rest_framework import routers
 from django.urls import path, include
 from ip_lab.ip_lab import views
 from rest_framework.authtoken import views as views_auth
+from bearer_auth.views import ObtainToken
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
@@ -33,5 +34,6 @@ urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('api-token-auth/', views_auth.obtain_auth_token)
+    path('api-token-auth/', views_auth.obtain_auth_token),
+    path('auth/token', ObtainToken.as_view()),
 ]

@@ -3,3 +3,4 @@ gunicorn
 djangorestframework
 django-filter
 django-heroku
+django-rest-auth-bearer
