@@ -41,7 +41,7 @@ class SoferSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Sofer
-        fields = ['id', 'user', 'ora_start', 'ora_sfarsit', 'institutie']
+        fields = ['id', 'user', 'ora_start', 'ora_sfarsit', 'available', 'institutie']
 
 
 class AdministratorSerializer(serializers.ModelSerializer):
