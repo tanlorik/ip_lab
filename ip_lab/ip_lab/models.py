@@ -58,6 +58,7 @@ class Sofer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     ora_start = models.IntegerField(default=0)
     ora_sfarsit = models.IntegerField(default=0)
+    available = models.BooleanField(default=True)
     institutie = models.ForeignKey(
         Institutie, related_name='soferi', blank=True, null=True, on_delete=models.CASCADE)
 
