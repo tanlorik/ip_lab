@@ -65,8 +65,8 @@ class AgentGuvernSerializer(serializers.ModelSerializer):
 
 class InstitutieSerializer(serializers.ModelSerializer):
 
-    administratori = serializers.StringRelatedField(many=True)
-    soferi = serializers.StringRelatedField(many=True)
+    administratori = serializers.IntegerField(many=True)
+    soferi = serializers.IntegerField(many=True)
 
     class Meta:
         model = Institutie
