@@ -71,3 +71,27 @@ class InstitutieViewSet(viewsets.ModelViewSet):
     queryset = Institutie.objects.all()
     serializer_class = InstitutieSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class IstoricViewSet(viewsets.ModelViewSet):
+    """
+    """
+    queryset = Istoric.objects.all()
+    serializer_class = IstoricSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class CerereViewSet(viewsets.ModelViewSet):
+    """
+    """
+    queryset = Cerere.objects.all()
+    serializer_class = CerereSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class TipMaterialViewSet(viewsets.ModelViewSet):
+    """
+    """
+    queryset = TipMaterial.objects.all()
+    serializer_class = TipMaterialSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]

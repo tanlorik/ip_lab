@@ -29,6 +29,9 @@ router.register(r'soferi', views.SoferViewSet)
 router.register(r'administratori', views.AdministratorViewSet)
 router.register(r'agenti', views.AgentGuvernViewSet)
 router.register(r'institutii', views.InstitutieViewSet)
+router.register(r'istoric', views.IstoricViewSet)
+router.register(r'cereri', views.CerereViewSet)
+router.register(r'tip_material', views.TipMaterialViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

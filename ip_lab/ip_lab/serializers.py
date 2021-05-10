@@ -15,13 +15,19 @@ class GroupSerializer(serializers.ModelSerializer):
         fields = ['id', 'url', 'name']
 
 
+class TipMaterialSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TipMaterial
+        fields = ['id', 'nume']
+
+
 class MaterialSerializer(serializers.ModelSerializer):
 
     # institutie = serializers.StringRelatedField(many=False)
 
     class Meta:
         model = Material
-        fields = ['id', 'nume', 'unitati', 'surplus', 'institutie']
+        fields = ['id', 'tip', 'unitati', 'surplus', 'institutie']
 
 
 class PromisiuneMaterialSerializer(serializers.ModelSerializer):
@@ -31,7 +37,8 @@ class PromisiuneMaterialSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = PromisiuneMaterial
-        fields = ['id', 'nume', 'unitati', 'data', 'institutie', 'agent']
+        fields = ['id', 'tip_material', 'unitati',
+                  'data', 'institutie', 'agent']
 
 
 class SoferSerializer(serializers.ModelSerializer):
@@ -41,7 +48,8 @@ class SoferSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Sofer
-        fields = ['id', 'user', 'ora_start', 'ora_sfarsit', 'institutie']
+        fields = ['id', 'user', 'ora_start',
+                  'ora_sfarsit', 'institutie', 'disponibil']
 
 
 class AdministratorSerializer(serializers.ModelSerializer):
@@ -70,4 +78,21 @@ class InstitutieSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Institutie
-        fields = ['id', 'nume', 'adresa', 'administratori', 'soferi']
+        fields = ['id', 'nume', 'adresa', 'administratori',
+                  'soferi', 'logitudine', 'latitudine']
+
+
+class IstoricSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Istoric
+        fields = ['id', 'institutie_donatoare', 'institutie_primitoare',
+                  'data_cerere', 'data_plecare_sofer', 'data_livrare', 'tip_material', 'cantitate', 'sofer']
+
+
+class CerereSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Cerere
+        fields = ['id', 'institutie', 'data_cerere',
+                  'data_limita', 'tip_material', 'cantitate', 'prioritate']
