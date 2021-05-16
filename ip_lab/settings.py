@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'ip_lab.ip_lab.apps.IpLabConfig',
+    #    'ip_lab.ip_lab.apps.IpLabConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework.authtoken',
     'bearer_auth',
+    'ip_lab.ip_lab',
 ]
 
 MIDDLEWARE = [
