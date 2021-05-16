@@ -137,3 +137,4 @@ REST_FRAMEWORK = {
     ]
 }
 TOKEN_EXPIRES_IN = 30 * 24  # 1 month
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
