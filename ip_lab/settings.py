@@ -34,7 +34,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     #    'ip_lab.ip_lab.apps.IpLabConfig',
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -45,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'bearer_auth',
     'ip_lab.ip_lab',
+    'django.contrib.admin',
 ]
 
 MIDDLEWARE = [
