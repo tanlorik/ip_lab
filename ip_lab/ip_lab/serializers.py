@@ -6,7 +6,8 @@ from ip_lab.ip_lab.models import *
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'url', 'username', 'email', 'groups', 'password']
+        fields = ['id', 'url', 'username', 'email',
+                  'groups', 'password', 'first_name', 'last_name']
 
 
 class GroupSerializer(serializers.ModelSerializer):
