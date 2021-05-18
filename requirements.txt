@@ -4,3 +4,4 @@ djangorestframework
 django-filter
 django-heroku
 django-rest-auth-bearer
+django-cors-headers
